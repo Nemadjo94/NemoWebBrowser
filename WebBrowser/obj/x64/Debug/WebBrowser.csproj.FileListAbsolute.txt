@@ -1,0 +1,10 @@
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\WebBrowser\bin\x64\Debug\WebBrowser.exe.config
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\WebBrowser\bin\x64\Debug\WebBrowser.exe
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\WebBrowser\bin\x64\Debug\WebBrowser.pdb
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\WebBrowser\obj\x64\Debug\WebBrowser.Form1.resources
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\WebBrowser\obj\x64\Debug\WebBrowser.Properties.Resources.resources
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\WebBrowser\obj\x64\Debug\WebBrowser.csproj.GenerateResource.cache
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\WebBrowser\obj\x64\Debug\WebBrowser.csproj.CoreCompileInputs.cache
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\WebBrowser\obj\x64\Debug\WebBrowser.exe
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\WebBrowser\obj\x64\Debug\WebBrowser.pdb
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\WebBrowser\obj\x64\Debug\WebBrowser.csprojAssemblyReference.cache

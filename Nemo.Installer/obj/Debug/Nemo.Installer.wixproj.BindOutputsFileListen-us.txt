@@ -1,0 +1,2 @@
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\Nemo.Installer\bin\Debug\en-us\Nemo Web Browser Install -Debug-x64.msi
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\Nemo.Installer\bin\Debug\en-us\Nemo Web Browser Install -Debug-x64.wixpdb

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <!-- Give product a unique ID per platform -->
+  <?if $(var.Platform) = x64 ?>
+  <?define ProductCode = "{6255F75B-9AEF-4805-8998-C264A61DAE0D}" ?>
+  <?else?>
+  <?define ProductCode = "{8BD4F960-97FA-43FA-A621-82A37E21F9E6}" ?>
+  <?endif?>
+  
+  <!-- Fixed upgrade Id -->
+  <?define UpgradeCode = "{D9E3ECCF-827E-4384-8D81-B84A385E77A0}" ?>
+  
+  <?define Manufacturer = "LordNemanja"?>
+  
+  <?define BuildVersion = 1.0.0.1 ?>
+  
+  <!-- Define main product -->
+	<Product Id="$(var.ProductCode)" 
+           Name="!(loc.ProductName_$(var.Platform))" 
+           Language="!(loc.Language)" 
+           Version="$(var.BuildVersion)" 
+           Manufacturer="$(var.Manufacturer)" 
+           UpgradeCode="$(var.UpgradeCode)">
+    
+    <!-- Provide package details -->
+		<Package InstallerVersion="200" 
+             Compressed="yes" 
+             InstallScope="perMachine" 
+             Platform="$(var.Platform)"
+             Manufacturer="$(var.Manufacturer)"
+             Description="!(loc.Description)"
+             Keywords="!(loc.Keywords)"
+             Comments="!(loc.Comments)"
+             Languages="!(loc.Language)"
+             
+    />
+    
+    <!-- Downgrade error message -->
+		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)" />
+    
+    <!-- Include .cab file into .msi file-->
+		<MediaTemplate 
+      EmbedCab="yes"
+     />
+
+    <!-- Define main app icon -->
+    <Icon Id="icon.ico" SourceFile="$(var.WebBrowser.ProjectDir)\icon.ico"/>
+  
+    <!--Use the icon.ico icon for this installer (shows up in Add/Remove programs)-->
+    <Property Id="ARPPRODUCTICON">icon.ico</Property>
+    
+    <!-- Help/Support website (shows in Add/Remove programs) -->
+    <Property Id="ARPURLINFOABOUT">http://www.banana.com</Property>
+    
+    <!-- Create a basic UI for the installer -->
+    <UIRef Id="WixUI_Minimal" />
+    
+    <!-- Change the Installer UI background images - I dont have them yet!!!
+    <WixVariable Id="WixUIDialogBmp" Value="$(var.ProjectDir)\Assets\Background.bmp"/>
+    <WixVariable Id="WixUIBannerBmp" Value="$(var.ProjectDir)\Assets\Banner.bmp"/> 
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\Assets\License.rtf"/>
+    -->
+    
+     <!-- Define components, shortcuts, files etc... for installer-->
+		<Feature Id="ProductFeature" Title="Nemo.Installer" Level="1">
+      
+			<ComponentGroupRef Id="ProductComponents" />
+      
+		</Feature>
+    
+	</Product>
+
+	
+
+
+</Wix>

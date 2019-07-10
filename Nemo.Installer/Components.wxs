@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  
+  <Fragment>
+    
+    <!-- Product Components -->
+    <ComponentGroup Id="ProductComponents">
+      
+      <!-- Shortcut -->
+      <ComponentRef Id="MainAppShortcut" />
+      
+      <!-- Test file -->
+      <!--<ComponentRef Id="TestFile" /> -->
+      
+    </ComponentGroup>
+    
+    <!-- Installed files -->
+    <DirectoryRef Id="INSTALLFOLDER" FileSource="..\WebBrowser\bin\$(var.Platform)\Debug">
+      
+      <!--<Component Id="TestFile" Guid="{31862698-50F6-4769-AA72-4A61AC6D90B1}" >
+        <File Id="FileTestFile" Name="WebBrowser.exe" KeyPath="yes" />-->
+
+      <Component Id="MainAppShortcut" Guid="{E830A0DF-718B-4C8C-A74B-43218C1C01CC}">
+
+        <File Id="FileTestFile" Name="WebBrowser.exe" />
+        
+        <Shortcut Id="MainAppShortcut"
+                  Name="!(loc.ProductName_$(var.Platform))"
+                  Target="[INSTALLFOLDER]WebBrowser.exe"
+                  Directory="InstallProgramMenuFolder"
+                  WorkingDirectory="INSTALLFOLDER"
+                  Icon="icon.ico"
+                  />
+        <!-- Our unique key for this component/shortcut -->
+        <RegistryValue Id="RegShortcutKey" Root="HKCU" Key="SOFTWARE\!(loc.ProductFolderName)" Name="Shortcut" Value="1" Type="integer" KeyPath="yes"/>
+
+        <!-- Remove start menu items -->
+        <RemoveFolder Id="RemoveStartMenu" Directory="InstallProgramMenuFolder" On="uninstall"/>
+
+      </Component>
+    </DirectoryRef>
+    
+  </Fragment>
+  
+</Wix>

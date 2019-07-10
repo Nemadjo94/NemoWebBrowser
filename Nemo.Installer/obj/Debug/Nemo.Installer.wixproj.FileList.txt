@@ -1,0 +1,8 @@
+obj\Debug\Product.wixobj
+obj\Debug\Nemo.Installer.wixproj.BindContentsFileListen-us.txt
+obj\Debug\Nemo.Installer.wixproj.BindOutputsFileListen-us.txt
+obj\Debug\Nemo.Installer.wixproj.BindBuiltOutputsFileListen-us.txt
+obj\Debug\Components.wixobj
+obj\Debug\Directories.wixobj
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\Nemo.Installer\bin\Debug\en-us\Nemo Web Browser Install -Debug-x64.msi
+C:\Users\Nemanja Djordjevic\source\repos\WebBrowser\Nemo.Installer\bin\Debug\en-us\Nemo Web Browser Install -Debug-x64.wixpdb
